@@ -7,7 +7,7 @@ const eqArrays = function(array1, array2) {
 
     for (let w = 0; w < array1.length; w++) {
         if (array1[w] !== array2[w]) {
-            wtf = false
+            wtf = false;
         }
     }
     return wtf;
@@ -22,7 +22,7 @@ const assertArraysEqual = function(array1, array2) {
 
     for (let w = 0; w < array1.length; w++) {
         if (array1[w] !== array2[w]) {
-            pizda = false
+            pizda = false;
         }
     }
 

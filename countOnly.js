@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const countOnly = function(allItems, items2Count) {
-    const results = {}
+    const results = {};
     let result = {};
     for (var item in items2Count) {
         if (items2Count[item]) {

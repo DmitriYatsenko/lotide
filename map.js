@@ -9,7 +9,7 @@ const assertArraysEqual = function (array1, array2) {
 
     for (let w = 0; w < array1.length; w++) {
         if (array1[w] !== array2[w]) {
-            wtf = false
+            wtf = false;
         }
     }
 
@@ -32,4 +32,4 @@ const map = function (array, callback) {
 const results1 = map(fourFs, word => word[0]);
 console.log(results1);
 
-assertArraysEqual(results1, ['f', 'f', 'f', 'd'])
+assertArraysEqual(results1, ['f', 'f', 'f', 'd']);
