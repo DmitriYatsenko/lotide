@@ -1,3 +1,5 @@
+const fourFs = ["feeding", "fleeing", "fighting", "ducking"];
+
 const assertArraysEqual = function (array1, array2) {
     let wtf = true;
 
@@ -19,6 +21,15 @@ const assertArraysEqual = function (array1, array2) {
     }
 }
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 2, "3"]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]);
+const map = function (array, callback) {
+    const results = [];
+    for (let item of array) {
+        results.push(callback(item));
+    }
+    return results;
+}
+
+const results1 = map(fourFs, word => word[0]);
+console.log(results1);
+
+assertArraysEqual(results1, ['f', 'f', 'f', 'd'])
