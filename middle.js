@@ -11,7 +11,7 @@ const middle = function(array) {
         n = (array.length - 1) / 2;
         ftw = [array[n]];
     }
-    console.log(ftw);
+    return ftw;
 }
 
 module.exports = middle;
