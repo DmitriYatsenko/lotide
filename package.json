@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@dmitriyatsenko/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide functions",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/DmitriYatsenko/lotide.git"
   },
-  "author": "",
+  "author": "Dmitri Yatsenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DmitriYatsenko/lotide/issues"
