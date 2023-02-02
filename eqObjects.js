@@ -50,8 +50,8 @@ assertEqual(eqObjects(ab, abc), false);
 
 console.log("FUCK22222222222222222222222222222222222222222222222222222222222222222222222222");
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
+const cd = { c: "1", d: {fk1: "2", fk2: 3} };
+const dc = { d: {fk1: "2", fk2: 3}, c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, dc), true);
 assertEqual(eqObjects(cd, cd2), false);
