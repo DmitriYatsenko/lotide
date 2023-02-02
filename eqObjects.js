@@ -8,19 +8,19 @@ const assertEqual = function (actual, expected) {
 };
 
 const eqArrays = function (array1, array2) {
-    let wtf = true;
-
     if (array1.length !== array2.length) {
-        wtf = false;
+        return false;
     }
-
-    for (let w = 0; w < array1.length; w++) {
-        if (array1[w] !== array2[w]) {
-            wtf = false;
+    for (let i = 0; i < array1.length; i++) {
+        if (Array.isArray(array1[i]) && (eqArrays(array1[i], array2[i]) === false)) {
+            return false;
+        }
+        if (!(Array.isArray(array1[i])) && array1[i] !== array2[i]) {
+            return false;
         }
     }
-    return wtf;
-}
+    return true;
+};
 
 const eqObjects = function (object1, object2) {
     let eq = true;
@@ -39,6 +39,10 @@ const eqObjects = function (object1, object2) {
     }
     return eq;
 };
+
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])); // => true
+console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])); // => false
+console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])); // => false
 
 console.log("FUCK11111111111111111111111111111111111111111111111111111111111111111111111111");
 
