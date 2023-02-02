@@ -40,18 +40,32 @@ const eqObjects = function (object1, object2) {
     return eq;
 };
 
+console.log("FUCK11111111111111111111111111111111111111111111111111111111111111111111111111");
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 const abc = { a: "1", b: "2", c: "3" };
+assertEqual(eqObjects(ab, ba), true);
+assertEqual(eqObjects(ab, abc), false);
 
-assertEqual(ab, ba);
-assertEqual(ab, abc);
-console.log(eqObjects(ab, ba));
-console.log(eqObjects(ab, abc));
+console.log("FUCK22222222222222222222222222222222222222222222222222222222222222222222222222");
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
+assertEqual(eqObjects(cd, dc), true);
+assertEqual(eqObjects(cd, cd2), false);
 
-console.log(eqObjects(cd, dc));
-console.log(eqObjects(cd, cd2));
+console.log("FUCK33333333333333333333333333333333333333333333333333333333333333333333333333");
+
+const str1 = ["A", "B", "C"];
+const str2 = ["A", "B", "C"];
+const str3 = ["a", "b", "c"];
+const str4 = ["1", "2", "3"];
+const str5 = [1, 2, 3];
+assertEqual(eqObjects(str1, str2), true);
+assertEqual(eqObjects(str2, str3), false);
+assertEqual(eqObjects(str3, str4), false);
+assertEqual(eqObjects(str4, str5), false);
+
+module.exports = eqObjects;
