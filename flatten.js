@@ -5,7 +5,7 @@
 //     return array.reduce((a, b) => {
 //         return a.concat(b);
 //     });
-// }
+    // }
 
 function splitArray(array) {
     var ret = [];
